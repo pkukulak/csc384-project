@@ -1,3 +1,15 @@
+class PlayerPool:
+    '''
+    A class representing a pool of potential
+    basketball players.
+    '''
+
+    def __init__(self, players=[]):
+        '''
+        Initialize a PlayerPool object to contain players.
+        '''
+        self.players = players
+
 class Player:
     '''
     A class representing a basketball player.
