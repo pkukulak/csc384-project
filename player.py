@@ -74,7 +74,8 @@ class Player:
         '''
         Return the name of this Player.
         '''
-        return self.name
+        first, last = self.name
+        return "{} {}".format(first, last)
 
     def get_height(self):
         '''
