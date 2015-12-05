@@ -10,6 +10,21 @@ class PlayerPool:
         '''
         self.players = players
 
+    def __repr__(self):
+        '''
+        Return the string representation of this PlayerPool.
+        '''
+        s = ""
+        for player in self.get_players():
+            s += str(player) + '\n'
+        return s
+
+    def get_players(self):
+        '''
+        Return the Players in this PlayerPool.
+        '''
+        return list(self.players)
+
 class Player:
     '''
     A class representing a basketball player.
@@ -40,6 +55,20 @@ class Player:
         self.gs = gs
         self.three_p = three_p
         self.ppg = ppg
+    
+    def __repr__(self):
+        '''
+        Return the string representation of this Player.
+        '''
+        first, last = self.get_name()
+        s = "{} {} ; costs {}".format(first, last, self.get_price())
+        return s
+
+    def __str__(self):
+        '''
+        Return the string of this Player.
+        '''
+        return self.__repr__()
 
     def get_name(self):
         '''
