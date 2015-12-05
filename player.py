@@ -16,7 +16,7 @@ class Player:
     '''
 
     def __init__(self, name='', height=0.0, weight=0, age=0,
-            price=0.0, gp=0, gs=0, three_p=0.0, ppg=0.00):
+            price=0, gp=0, gs=0, three_p=0.0, ppg=0.00):
         '''
         Initializes a Player object. Players are indentified
         by the following parameters:
