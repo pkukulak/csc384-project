@@ -61,7 +61,7 @@ class Player:
         Return the string representation of this Player.
         '''
         first, last = self.get_name()
-        s = "{} {} ; costs {}".format(first, last, self.get_price())
+        s = "{} {}\n".format(first, last)
         return s
 
     def __str__(self):
@@ -74,8 +74,7 @@ class Player:
         '''
         Return the name of this Player.
         '''
-        first, last = self.name
-        return "{} {}".format(first, last)
+        return self.name
 
     def get_height(self):
         '''
