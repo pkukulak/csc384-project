@@ -2,15 +2,17 @@ from player import *
 from itertools import product
 import random
 
-NUM_PLAYERS = 10
+NUM_PLAYERS = 20
 
 FIRST_NAMES = ["Randy", "Stephen", "Alex", "Targus",
                "Samuel", "Portland", "Justin", "Epcott",
-               "Karter", "Joplin-Jones", "Madman"]
+               "Karter", "Joplin-Jones", "Madman", "Osama",
+               "Spindler", "Spangler", "Shawn", "Sean"]
 
 LAST_NAMES = ["Stormer", "Batplish", "Goldman-Sachs", "Sik",
               "Wu", "Wu-Jonestown", "Smee", "Urinaea",
-              "Curry", "Bryant", "George"]
+              "Curry", "Bryant", "George", "Gleave Riemann",
+              "Tonka", "Callabasus", "Iron", "Sturmgewehr"]
 
 ALL_NAMES = list(product(FIRST_NAMES, LAST_NAMES))
 
