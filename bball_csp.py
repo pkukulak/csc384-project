@@ -20,7 +20,7 @@ def get_cost_constraints(variable_array):
 
 def get_total_cost_tuples(variable_array):
     tuples = []
-    max_cost = 500000
+    max_cost = 300000
     min_cost = 200000
     for t in generate_tuples(variable_array[0].cur_domain()):
         total = sum([p.get_price() for p in t]) 
@@ -111,13 +111,15 @@ def print_soln(var_array):
     print([var.get_assigned_value() for var in var_array])
     print([var.get_assigned_value().get_price() for var in var_array if var.get_assigned_value()])
 
-
-
-# basic form to interface with existing code.
-if __name__ == "__main__":
-    b = random_players()
-    csp, var_array = bball_csp_model(b)
+def run_csp(players):
+    csp, var_array = bball_csp_model(players)
     solver = BT(csp)
     solver.bt_search(prop_GAC)
     print_soln(var_array)
     print(sum([p.get_assigned_value().get_price() for p in var_array if p.get_assigned_value()]))
+
+# basic form to interface with existing code.
+if __name__ == "__main__":
+    b = random_players()
+    run_csp(b)
+   

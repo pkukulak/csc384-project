@@ -17,6 +17,24 @@ LAST_NAMES = ["Stormer", "Batplish", "Goldman-Sachs", "Sik",
 
 ALL_NAMES = list(product(FIRST_NAMES, LAST_NAMES))
 
+def test_list():
+    '''
+    Return a PlayerPool of NUM_PLAYERS
+    '''
+    Players = []
+
+    Players.append(Player("Lebron James", 6.4, 220, 31, 100000, 25, 20, .53, 30))
+    Players.append(Player("Steph Curry", 6.0, 160, 25, 50500, 15, 5, .65, 22))
+    Players.append(Player("Michael Jordan", 6.4, 240, 43, 75900, 25, 10, .67, 45))
+    Players.append(Player("Fahiem Bacchus", 6.8, 260, 25, 100000, 25, 10, .80, 55))
+    Players.append(Player("Kobe Bryant", 6.0, 200, 31, 40000, 20, 15, .64, 35))
+
+    Players.append(Player("Jimmy Butler", 5,8, 160, 40, 20500, 15, 5, .42, 14))
+    Players.append(Player("Russell Westbrook", 6.0, , 24, 30000, 25, 20, .47, 26))
+    Players.append(Player("Jamal Crawford", 6.6, 220, 26, 33000, 10, 5, .35, 16))
+    Players.append(Player("Larry Bird", 6.0, 180, 28, 45000, 15, 6, .58, 40))
+    Players.append(Player("Shaquille O Neal", 6.8, 250, 45, 22000, 15, 3, .25, 36))
+    
 def random_players():
     '''
     Return a PlayerPool of NUM_PLAYERS randomly-generated Player objects.
