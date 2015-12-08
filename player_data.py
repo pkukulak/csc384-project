@@ -1,6 +1,7 @@
 from player import *
 from itertools import product
 import random
+from bball_csp import *
 
 NUM_PLAYERS = 20
 
