@@ -63,7 +63,7 @@ def random_players():
 
     players = []
     for i in range(NUM_PLAYERS):
-        name = names[i]
+        name = names[i][0] + ' ' + names[i][1]
         height = heights[i]
         weight = weights[i]
         age = ages[i]
