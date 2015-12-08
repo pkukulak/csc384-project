@@ -78,6 +78,8 @@ class Variable:
     def __init__(self, name, domain=[]):
         '''Create a variable object, specifying its name (a
         string). Optionally specify the initial domain.
+
+        For the bball problem, the domain is a list of Player objects.
         '''
         self.name = name                #text name for variable
         self.dom = list(domain)         #Make a copy of passed domain
@@ -201,13 +203,13 @@ class Constraint:
        the satisfied function which tests if an assignment to the
        variables in the constraint's scope satisfies the constraint'''
 
-    def __init__(self, name, scope): 
+    def __init__(self, name, scope):
         '''create a constraint object, specify the constraint name (a
         string) and its scope (an ORDERED list of variable objects).
         The order of the variables in the scope is critical to the
         functioning of the constraint.
 
-        Consraints are implemented as storing a set of satisfying
+        Constraints are implemented as storing a set of satisfying
         tuples (i.e., each tuple specifies a value for each variable
         in the scope such that this sequence of values satisfies the
         constraints).
@@ -220,6 +222,7 @@ class Constraint:
         self.scope = list(scope)
         self.name = name
         self.sat_tuples = dict()
+
 
         #The next object data item 'sup_tuples' will be used to help
         #support GAC propgation. It allows access to a list of 
@@ -240,6 +243,7 @@ class Constraint:
                 if not (var,val) in self.sup_tuples:
                     self.sup_tuples[(var,val)] = []
                 self.sup_tuples[(var,val)].append(t)
+                
 
     def get_scope(self):
         '''get list of variables the constraint is over'''
@@ -253,6 +257,7 @@ class Constraint:
            are must be ordered in the same order as the list of
            variables in the constraints scope'''
         return tuple(vals) in self.sat_tuples
+        return self.constraint_function(vals)
 
     def get_n_unasgn(self):
         '''return the number of unassigned variables in the constraint's scope'''

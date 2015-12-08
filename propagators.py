@@ -129,7 +129,7 @@ def prop_GAC(csp, newVar=None):
         curr = constraints.pop(0)
         scope = curr.get_scope()
         for var in scope:
-            for val in var.cur_domain():
+            for val in var.cur_domain(): # this loop
                 if not curr.has_support(var, val):
                     pruned += [(var, val)]
                     var.prune_value(val)
