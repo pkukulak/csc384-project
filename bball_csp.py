@@ -82,11 +82,11 @@ def get_variables(initial_state):
         Each variable has a domain.
         initial_state is an array of Player objects.
     """
-    pos1 = Variable('position 1', list(initial_state.get_players()))
-    pos2 = Variable('position 2', list(initial_state.get_players()))
-    pos3 = Variable('position 3', list(initial_state.get_players()))
-    pos4 = Variable('position 4', list(initial_state.get_players()))
-    pos5 = Variable('position 5', list(initial_state.get_players()))
+    pos1 = Variable('Point Guard', list(initial_state.get_players()))
+    pos2 = Variable('Shooting Guard', list(initial_state.get_players()))
+    pos3 = Variable('Small Forward', list(initial_state.get_players()))
+    pos4 = Variable('Power Forward', list(initial_state.get_players()))
+    pos5 = Variable('Center', list(initial_state.get_players()))
     return [pos1, pos2, pos3, pos4, pos5]
 
 
