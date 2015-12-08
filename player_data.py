@@ -29,12 +29,24 @@ def test_list():
     Players.append(Player("Fahiem Bacchus", 6.8, 260, 25, 100000, 25, 10, .80, 55))
     Players.append(Player("Kobe Bryant", 6.0, 200, 31, 40000, 20, 15, .64, 35))
 
-    Players.append(Player("Jimmy Butler", 5,8, 160, 40, 20500, 15, 5, .42, 14))
-    Players.append(Player("Russell Westbrook", 6.0, , 24, 30000, 25, 20, .47, 26))
+    Players.append(Player("Jimmy Butler", 5.8, 160, 40, 20500, 15, 5, .42, 14))
+    Players.append(Player("Russell Westbrook", 6.0, 160, 24, 30000, 25, 20, .47, 26))
     Players.append(Player("Jamal Crawford", 6.6, 220, 26, 33000, 10, 5, .35, 16))
     Players.append(Player("Larry Bird", 6.0, 180, 28, 45000, 15, 6, .58, 40))
     Players.append(Player("Shaquille O Neal", 6.8, 250, 45, 22000, 15, 3, .25, 36))
-    
+
+    Players.append(Player("James Harden", 6.2, 180, 21, 62570, 15, 15, .53, 28))
+    Players.append(Player("Carmelo Anthony", 5.6, 160, 31, 28078, 20, 5, .48, 34))
+    Players.append(Player("Karl Malone", 6.3, 205, 40, 36500, 20, 5, .21, 14))
+    Players.append(Player("Steve Nash", 6.2, 200, 30, 72780, 15, 10, .36, 20))
+    Players.append(Player("Charles Barkley", 6.5, 220, 45, 68040, 22, 10, .85, 50))
+
+    Players.append(Player("Bill Russell", 5.6, 155, 34, 27600, 15, 5, .36, 25))
+    Players.append(Player("Hakeem Olajuwon", 6.0, 185, 34, 40800, 20, 15, .15, 10))
+    Players.append(Player("Kevin Durant", 6.2, 180, 32, 60890, 20, 15, .60, 35))
+    Players.append(Player("Allen Iverson", 5.6, 155, 35, 78900, 10, 5, .56, 40))
+    Players.append(Player("Dirk Nowitzki", 6.4, 200, 32, 42040, 15, 7, .67, 32))
+
 def random_players():
     '''
     Return a PlayerPool of NUM_PLAYERS randomly-generated Player objects.
@@ -64,3 +76,14 @@ def random_players():
                            player_gs, player_three_p, player_ppg)]
 
     return PlayerPool(players)
+
+def print_info(players):
+
+  s = ''
+  for player in players.get_players():
+    s += 'Name: ' + player.get_name() + ' Height: ' + str(player.get_height()) + \
+          ' Weight: ' + str(player.get_weight()) + ' Age: ' + str(player.get_age()) \
+          + ' Salary: ' + str(player.get_price()) + ' Games Played:' + str(player.get_games_played()) \
+          + ' Games Started: ' + str(player.get_games_started()) + ' Three pointer: ' \
+           + str(player.get_three_pointers()) + ' Points per Game: ' + str(player.get_points_per_game()) + '\n'
+  print(s)
